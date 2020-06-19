@@ -19,7 +19,9 @@
         {% for task in tasks %}
             <tr>
                 <td>{{ task.content }}</td>
-                <td>{{ task.date_created.date() }}</td>
+          <!-- accuracy only until date, not hours -->
+          <!-- https://www.programcreek.com/python/index/6/datetime -->
+                <td>{{ task.date_created.strftime("%Y-%m-%d %H:%M:%S") }}</td>
                 <td>
                     <!-- refer to @app.route('/del/<int:id>') in app.py -->
                     <a href="/del/{{task.id}}">Delete</a>

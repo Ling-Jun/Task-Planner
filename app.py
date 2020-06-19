@@ -19,7 +19,9 @@ class Todo(db.Model):
 
     def __repr__(self):
         return '<Task %r>' % self.id
-# everytime after updating the app.py file, make sure you re-create test.db file by going into python from conda prompt
+# everytime after updating the app.py file, make sure you re-create test.db file
+# by going into python from conda prompt
+# ==============================================
 # from app import db
 # db.create_all()
 
